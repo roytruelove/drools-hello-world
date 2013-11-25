@@ -1,0 +1,9 @@
+import se.waymark.drools.message.Message;
+
+rule "Hello World"
+when
+  message:Message (type == 'Hello')
+then
+  message.printMessage();
+end
+
