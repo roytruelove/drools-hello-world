@@ -2,6 +2,7 @@ package se.waymark.drools.message;
 
 public class Message {
     private String type;
+    private int messageValue;
 
     public String getType() {
         return type;
@@ -11,7 +12,15 @@ public class Message {
         this.type = type;
     }
 
+    public int getMessageValue() {
+        return messageValue;
+    }
+
+    public void setMessageValue(int messageValue) {
+        this.messageValue = messageValue;
+    }
+
     public void printMessage() {
-        System.out.println("Type: " + type);
+        System.out.println("Type: " + type + " value: " + messageValue);
     }
 }

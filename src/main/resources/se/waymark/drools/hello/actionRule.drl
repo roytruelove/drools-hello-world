@@ -1,0 +1,10 @@
+import se.waymark.drools.message.Message;
+import se.waymark.drools.action.Action;
+
+rule "Act on high value in message"
+when
+  message:Message (messageValue > 17)
+then
+  Action action = new Action();
+  action.performAction(message);
+end
